@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Zadanie JavaScript</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1>Proste działania - Szubert, Klasa 3F</h1>
+
+    <label for="a">Podaj pierwszą liczbę:</label> 
+    <input type="number" id="a">
+    <br><br>
+
+    <label for="b">Podaj drugą liczbę:</label> 
+    <input type="number" id="b">
+    <br><br>
+
+    <button onclick="suma_szu()">DODAWANIE</button>
+    <button onclick="roznica_szu()">ODEJMOWANIE</button>
+    <button onclick="iloczyn_szu()">MNOŻENIE</button>
+    <button onclick="iloraz_szu()">DZIELENIE</button>
+    <button onclick="teoria_szu()">TEORIA</button>
+
+    <div id="wynik" style="margin-top:20px;"></div>
+
+    <script>
+        function suma_szu() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + (a + b).toFixed(2);
+            }
+        }
+
+        function roznica_szu() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + (a - b).toFixed(2);
+            }
+        }
+
+        function iloczyn_szu() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + (a * b).toFixed(2);
+            }
+        }
+
+        function iloraz_szu() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else if (b === 0) {
+                document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
+            } else {
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + (a / b).toFixed(2);
+            }
+        }
+
+        function teoria_szu() {
+            alert("Teoria działania: Skrypt umożliwia wykonywanie podstawowych działań matematycznych na dwóch liczbach.");
+        }
+    </script>
+</body>
+</html>

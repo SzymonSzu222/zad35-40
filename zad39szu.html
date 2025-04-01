@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 39</title>
+</head>
+<body>
+    <h1 style="color: green;">MENU:</h1>
+    <p style="color: red; font-size: 24px;">1 - CZERWONY</p>
+    <p style="color: blue; font-size: 24px;">2 - NIEBIESKI</p>
+    <button onclick="fun_kow()">Oblicz</button>
+    
+    <script>
+        function fun_kow() {
+            var x_kow = prompt("Podaj kolor (1 - czerwony, 2 - niebieski lub wpisz nazwę koloru)", "");
+            
+            if (x_kow == 1 || x_kow.toLowerCase() == "czerwony") {
+                document.write('<h1 style="color:red; font-size: 48px;">Wczytałeś kolor czerwony</h1><br />');
+            } else if (x_kow == 2 || x_kow.toLowerCase() == "niebieski") {
+                document.write('<h1 style="color:blue; font-size: 48px;">Wczytałeś kolor niebieski</h1><br />');
+            } else {
+                document.write('<h1 style="color:black; font-size: 32px;">Nieznany kolor</h1><br />');
+            }
+        }
+    </script>
+</body>
+</html>
